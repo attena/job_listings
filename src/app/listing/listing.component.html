@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="logo-and-info">
+    <img [src]="company.logo" alt="company logo" class="company-logo" />
+    <div class="main-info">
+      <div class="name-tags">
+        <a
+          href="https://github.com/CondensedMilk7"
+          target="_blank"
+          class="company-name"
+          >{{ company.company }}</a
+        >
+        <div>
+          <p class="new" *ngIf="company.new">NEW!</p>
+          <p class="featured" *ngIf="company.featured">FEATURED</p>
+        </div>
+      </div>
+      <h4 class="position">{{ company.position }}</h4>
+      <div class="details">
+        <p class="posted-at">{{ company.postedAt }}</p>
+        <span class="bullet">•</span>
+        <p class="contract">{{ company.contract }}</p>
+        <span class="bullet">•</span>
+        <p class="location">{{ company.location }}</p>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="tags">
+    <a class="tag" (click)="onSelectTag(company.role)">{{ company.role }} </a>
+    <a class="tag" (click)="onSelectTag(company.level)">{{ company.level }}</a>
+    <a
+      class="tag"
+      *ngFor="let language of company.languages; let i = index"
+      (click)="onSelectTag(company.languages[i])"
+    >
+      {{ company.languages[i] }}
+    </a>
+
+    <a
+      class="tag"
+      *ngFor="let tool of company.tools; let i = index"
+      (click)="onSelectTag(company.tools[i])"
+    >
+      {{ company.tools[i] }}
+    </a>
+  </div>
+</div>

@@ -1,1 +1,269 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 15px;
+    font-family: "Spartan", sans-serif;
+  }
+  
+  :root {
+    /* primary */
+    --desat-dark-cyan: hsl(180, 29%, 50%);
+    /* background */
+    --light-gray-cyan: hsl(180, 52%, 96%);
+    /* filter tablets */
+    --light-gray-cyan2: hsl(180, 31%, 95%);
+    --dark-gray-cyan: hsl(180, 8%, 52%);
+    --very-dark-cyan: hsl(180, 14%, 20%);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  body {
+    background: var(--light-gray-cyan);
+  }
+  
+  .img-header {
+    background-image: url("./assets/images/bg-header-mobile.svg");
+    background-color: var(--desat-dark-cyan);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+  
+  app-filter {
+    display: flex;
+    width: 90vw;
+    min-height: 6rem;
+    background: var(--light-gray-cyan2);
+    position: relative;
+    bottom: 40px;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 5px 6px 20px 1px hsla(180, 29%, 50%, 0.301);
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  .tags-list {
+    min-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .filter-tag {
+    color: var(--desat-dark-cyan);
+    font-weight: 700;
+    background: hsl(180, 37%, 91%);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 8px;
+  }
+  
+  .filter-tag-name {
+    margin: 4px;
+  }
+  
+  .btn-remove {
+    background: var(--desat-dark-cyan);
+    display: flex;
+    cursor: pointer;
+    padding: 0.7rem;
+  }
+  
+  .btn-remove:hover,
+  .btn-remove:focus {
+    background-color: var(--very-dark-cyan);
+  }
+  
+  .button-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-clear {
+    color: var(--dark-gray-cyan);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .btn-clear:hover,
+  .btn-clear:focus {
+    color: var(--desat-dark-cyan);
+    text-decoration: underline;
+  }
+  
+  .card {
+    width: 90vw;
+    background: var(--light-gray-cyan2);
+    border-left: 5px solid var(--desat-dark-cyan);
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    min-width: 332px;
+    box-shadow: 5px 6px 20px 1px hsla(180, 29%, 50%, 0.301);
+    margin: 30px auto;
+  }
+  
+  .company-logo {
+    width: 60px;
+    position: absolute;
+    top: -30px; /* Needs to be half of the image's width */
+  }
+  
+  .main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 9rem;
+  }
+  
+  .name-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin: 6px 0; */
+  }
+  
+  .name-tags p {
+    font-weight: 700;
+  }
+  
+  .name-tags div {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+  }
+  
+  .name-tags div p {
+    margin: 0 4px;
+  }
+  
+  .company-name {
+    color: var(--desat-dark-cyan);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .new {
+    background: var(--desat-dark-cyan);
+    padding: 6px 10px;
+    padding-top: 12px;
+    border-radius: 20px;
+    color: var(--light-gray-cyan);
+  }
+  
+  .featured {
+    background: var(--very-dark-cyan);
+    padding: 6px 10px;
+    padding-top: 12px;
+    border-radius: 20px;
+    color: var(--light-gray-cyan);
+  }
+  
+  .position {
+    font-size: 1.2rem;
+    color: var(--very-dark-cyan);
+  }
+  
+  .details {
+    display: flex;
+    color: var(--dark-gray-cyan);
+  }
+  
+  .bullet {
+    margin: 0 6px;
+    font-weight: bold;
+  }
+  
+  hr {
+    margin: 12px 0 16px 0;
+    width: 100%;
+    color: var(--dark-gray-cyan);
+    /* border-bottom: 1px solid var(--dark-gray-cyan); */
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    color: var(--desat-dark-cyan);
+    font-weight: 700;
+    background: hsl(180, 37%, 91%);
+    padding: 8px;
+    border-radius: 6px;
+    margin: 8px 12px 8px 0;
+    cursor: pointer;
+  }
+  
+  .tag:hover,
+  .tag:focus {
+    background: var(--desat-dark-cyan);
+    color: var(--light-gray-cyan);
+  }
+  
+  @media (min-width: 1000px) {
+    .img-header {
+      background-image: url("./assets/images/bg-header-desktop.svg");
+      background-color: var(--desat-dark-cyan);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 14vh;
+    }
+    .card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo-and-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .company-logo {
+      position: static;
+      width: inherit;
+      margin: 0 20px 0 10px;
+    }
+  
+    hr {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .card {
+      width: 80vw;
+    }
+  
+    app-filter {
+      width: 80vw;
+    }
+  }
+  
